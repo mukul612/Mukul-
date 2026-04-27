@@ -17,7 +17,7 @@ const grid = document.getElementById('productGrid');
 if (grid) {
   products.forEach((product) => {
     const card = document.createElement('article');
-    card.className = 'product-card glass reveal';
+    card.className = 'product-card glass';
     card.innerHTML = `
       <img src="${product.image}" alt="${product.name}" loading="lazy" />
       <h3>${product.name}</h3>
@@ -47,38 +47,16 @@ if (tiltEl) {
 }
 
 const nav = document.getElementById('nav');
-const bgImage = document.querySelector('.bg-layer img');
 const setBackgroundFade = () => {
-  const maxScroll = window.innerHeight * 1.5;
+  const maxScroll = window.innerHeight * 1.25;
   const progress = Math.min(window.scrollY / maxScroll, 1);
   const opacity = 1 - progress;
   document.documentElement.style.setProperty('--bgOpacity', opacity.toFixed(3));
-
-  if (bgImage) {
-    const scale = 1.1 - progress * 0.08;
-    bgImage.style.transform = `scale(${scale.toFixed(3)})`;
-  }
 
   if (nav) {
     nav.classList.toggle('scrolled', window.scrollY > 18);
   }
 };
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      }
-    });
-  },
-  { threshold: 0.14 }
-);
-
-document.querySelectorAll('.section, .hero-panel, .hero-specs, .contact-cards, .map-wrap, .process-grid article').forEach((el) => {
-  el.classList.add('reveal');
-  revealObserver.observe(el);
-});
 
 window.addEventListener('scroll', setBackgroundFade, { passive: true });
 window.addEventListener('resize', setBackgroundFade);
