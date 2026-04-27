@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AB Induction | Advanced Industrial Heating Systems</title>
+    <title>AB Induction | Industrial Heating Intelligence</title>
     <meta
       name="description"
       content="AB Induction designs and manufactures induction heating, hardening, brazing, annealing, and electroplating rectifier systems with PLC/CNC automation."
@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="bg-layer" aria-hidden="true">
+      <img
+        src="https://abinduction.in/wp-content/uploads/2026/04/ab-banner-1.webp"
+        alt=""
+      />
+      <div class="bg-vignette"></div>
+    </div>
+
     <div class="noise" aria-hidden="true"></div>
     <header class="topbar">
       <div class="container">
@@ -28,6 +36,56 @@
       </div>
     </header>
 
+    <nav class="nav container" id="nav">
+      <a class="logo" href="#home">AB <span>INDUCTION</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-outline" href="#contact">Talk to Engineering</a>
+    </nav>
+
+    <main id="home" class="content-wrap">
+      <section class="hero container">
+        <div class="hero-panel glass" data-tilt>
+          <p class="eyebrow">WELCOME TO A.B. ENTERPRISES</p>
+          <h1>Next-Gen <span>Induction Engineering</span> for Production-Scale Manufacturing</h1>
+          <p class="lead">
+            We manufacture induction heating & hardening machines and IGBT-based high frequency
+            electroplating rectifiers with PLC/CNC automation.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#products">View Product Systems</a>
+            <a class="btn btn-outline" href="#about">Explore Capabilities</a>
+          </div>
+          <div class="stat-row">
+            <article>
+              <h3>35 KM</h3>
+              <p>From IGI Airport, Delhi</p>
+            </article>
+            <article>
+              <h3>12V–24V</h3>
+              <p>Rectifier voltage options</p>
+            </article>
+            <article>
+              <h3>300A–10,000A</h3>
+              <p>Current range options</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-specs glass">
+          <h2>Technical Snapshot</h2>
+          <ul>
+            <li><span>Core Domain</span><strong>Induction Heating Technology</strong></li>
+            <li><span>Automation</span><strong>PLC / CNC Controlled Machines</strong></li>
+            <li><span>Applications</span><strong>Hardening, Brazing, Annealing, Shrink Fitting</strong></li>
+            <li><span>Industry</span><strong>Auto Components & Tractor Parts</strong></li>
+          </ul>
+        </aside>
     <nav class="nav container">
       <a class="logo" href="#home">AB <span>Induction</span></a>
       <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">☰</button>
@@ -83,70 +141,65 @@
 
       <section id="about" class="section container">
         <div class="section-head">
-          <p class="eyebrow">Introduction</p>
-          <h2>Modern induction systems for demanding production lines.</h2>
+          <p class="eyebrow">About AB Induction</p>
+          <h2>Precision machines, deeply engineered process control.</h2>
         </div>
-        <div class="about-grid">
-          <div class="glass">
-            <img src="https://abinduction.in/wp-content/uploads/2026/01/about-1.png" alt="AB Induction plant" loading="lazy" />
+
+        <div class="split-grid">
+          <div class="glass image-card">
+            <img src="https://abinduction.in/wp-content/uploads/2026/01/about-1.png" alt="AB Induction facility" loading="lazy" />
           </div>
-          <div>
+          <div class="text-stack">
             <p>
               AB Induction provides automation solutions for induction heating, hardening,
-              brazing, annealing, pre-heating, shrink fitting, billet heating, end heating,
-              and electroplating applications.
+              brazing, annealing, pre-heating, shrink fitting, billet heating and end heating.
             </p>
             <p>
-              With experienced engineers and technicians, we deliver user-friendly,
-              budget-conscious systems with high productivity and precise process control.
+              We also manufacture high frequency electroplating rectifiers and specially designed
+              automation machines for customer-specific production requirements.
             </p>
-            <ul class="chip-list">
-              <li>PLC & CNC Controlled Machines</li>
-              <li>Custom Inductor Design</li>
-              <li>Auto Components & Tractor Parts</li>
-              <li>Shrink Fitting Solutions</li>
-            </ul>
+            <div class="chip-list">
+              <span>Experienced Engineers</span>
+              <span>Efficient & User-Friendly Systems</span>
+              <span>High Productivity</span>
+              <span>Budget-Conscious Design</span>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section id="process" class="section container">
+        <div class="section-head">
+          <p class="eyebrow">Capability Architecture</p>
+          <h2>End-to-end technical delivery flow</h2>
+        </div>
+        <div class="process-grid">
+          <article class="glass">
+            <h3>01. Process Study</h3>
+            <p>Evaluate part geometry, heat profile, throughput, and energy targets.</p>
+          </article>
+          <article class="glass">
+            <h3>02. Machine Engineering</h3>
+            <p>Configure induction source, cooling path, inductor, and control strategy.</p>
+          </article>
+          <article class="glass">
+            <h3>03. Automation Integration</h3>
+            <p>Deploy PLC/CNC logic with production interlocks and repeatability checks.</p>
+          </article>
+          <article class="glass">
+            <h3>04. Delivery & Support</h3>
+            <p>Commission, validate performance, and optimize system behavior on-line.</p>
+          </article>
         </div>
       </section>
 
       <section id="products" class="section container">
         <div class="section-head sticky-head">
-          <p class="eyebrow">Our Product Lineup</p>
-          <h2>Interactive product catalog</h2>
-          <p>Same AB Induction machine range with a redesigned technical UI.</p>
+          <p class="eyebrow">Our Product Portfolio</p>
+          <h2>Interactive machine lineup</h2>
+          <p>Current AB Induction models and media, redesigned for a professional technical experience.</p>
         </div>
         <div class="product-grid" id="productGrid"></div>
-      </section>
-
-      <section id="capabilities" class="section container">
-        <div class="section-head">
-          <p class="eyebrow">Why Choose Us</p>
-          <h2>Technical experts and engineers</h2>
-        </div>
-        <div class="timeline">
-          <article class="glass">
-            <h3>Induction Process Expertise</h3>
-            <p>
-              Proven capabilities for hardening, brazing, annealing, and heavy-duty thermal process
-              integration.
-            </p>
-          </article>
-          <article class="glass">
-            <h3>Electroplating Power Systems</h3>
-            <p>
-              IGBT-based air-cooled rectifiers with configurable voltage/current combinations as per
-              customer applications.
-            </p>
-          </article>
-          <article class="glass">
-            <h3>Custom Automation</h3>
-            <p>
-              Specially designed PLC/CNC automation lines tailored to production geometry,
-              throughput targets, and process repeatability.
-            </p>
-          </article>
-        </div>
       </section>
     </main>
 
@@ -155,12 +208,12 @@
         <div>
           <h3>AB Induction</h3>
           <p>
-            One of the pioneers of induction heating technology in India, delivering industrial
-            heating and automation systems for high-performance manufacturing.
+            One of the pioneers of induction heating technology in India, delivering robust
+            industrial heating and automation systems for modern manufacturing.
           </p>
         </div>
         <div>
-          <h4>Reach Us</h4>
+          <h4>Contact</h4>
           <p>Plot No.89, Bhakri Industrial Area, Bhakri Pali Road N.I.T. Faridabad, Haryana-121001</p>
           <p><a href="mailto:abenterprises9891@gmail.com">abenterprises9891@gmail.com</a></p>
           <p><a href="tel:+919891964848">+91-9891964848</a></p>

@@ -14,30 +14,50 @@ const products = [
 ];
 
 const grid = document.getElementById('productGrid');
-products.forEach((product) => {
-  const card = document.createElement('article');
-  card.className = 'product-card glass';
-  card.innerHTML = `
-    <img src="${product.image}" alt="${product.name}" loading="lazy" />
-    <h3>${product.name}</h3>
-    <p>Industrial-grade AB Induction equipment configuration.</p>
-  `;
-  grid.appendChild(card);
-});
+if (grid) {
+  products.forEach((product) => {
+    const card = document.createElement('article');
+    card.className = 'product-card glass';
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" loading="lazy" />
+      <h3>${product.name}</h3>
+      <p>Industrial-grade AB Induction equipment configuration.</p>
+    `;
+    grid.appendChild(card);
+  });
+}
 
 const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
-menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+}
 
 const tiltEl = document.querySelector('[data-tilt]');
 if (tiltEl) {
-  tiltEl.addEventListener('mousemove', (e) => {
+  tiltEl.addEventListener('mousemove', (event) => {
     const rect = tiltEl.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    tiltEl.style.transform = `rotateX(${-(y * 10)}deg) rotateY(${x * 12}deg)`;
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    tiltEl.style.transform = `rotateX(${-(y * 7)}deg) rotateY(${x * 10}deg)`;
   });
   tiltEl.addEventListener('mouseleave', () => {
     tiltEl.style.transform = 'rotateX(0deg) rotateY(0deg)';
   });
 }
+
+const nav = document.getElementById('nav');
+const setBackgroundFade = () => {
+  const maxScroll = window.innerHeight * 1.25;
+  const progress = Math.min(window.scrollY / maxScroll, 1);
+  const opacity = 1 - progress;
+  document.documentElement.style.setProperty('--bgOpacity', opacity.toFixed(3));
+
+  if (nav) {
+    nav.classList.toggle('scrolled', window.scrollY > 18);
+  }
+};
+
+window.addEventListener('scroll', setBackgroundFade, { passive: true });
+window.addEventListener('resize', setBackgroundFade);
+setBackgroundFade();
